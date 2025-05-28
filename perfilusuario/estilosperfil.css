@@ -1,0 +1,174 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .contenedor-principal {
+    display: flex;
+    max-width: 1200px;
+    margin: 10px auto;
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  .columna {
+    background-color:#d6e0f0;;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    flex: 1; /* Ambas columnas del mismo tamaño */
+  }
+
+  .perfil-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+  }
+
+  .portada {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background-color: #193a6a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+  }
+
+  .portada img {
+    max-height: 100px;
+    object-fit: contain;
+  }
+
+  .perfil {
+    text-align: center;
+    margin-top: -50px;
+  }
+
+  .perfil img.foto-perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    background-color: white;
+  }
+
+  .nombre {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .descripcion {
+    font-size: 14px;
+    color: #444;
+  }
+
+  .insignia {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .insignia img {
+    width: 20px;
+    vertical-align: middle;
+  }
+
+  .contenedor {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+
+  .contenedor h3 {
+    margin-top: 0;
+    color: #193a6a;
+    font-size: 16px;
+  }
+
+  .logo {
+    max-width: 60px;
+    display: block;
+    margin: 10px auto 0;
+  }
+
+  .crear-publicacion {
+    background-color: #f0f2f5;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .crear-publicacion textarea {
+    width: 500px;
+    border: none;
+    resize: none;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 15px;
+    margin-top: 15px;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+  }
+
+  .crear-publicacion .acciones {
+    text-align: right;
+    margin-top: 20px;
+  }
+
+  .crear-publicacion button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .crear-publicacion button:hover {
+    background-color: #145dc1;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .publicacion {
+    background-color: #f8fafd;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  }
+
+  .publicacion .encabezado {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .publicacion .encabezado .fecha {
+    font-size: 12px;
+    color: #888;
+  }
+
+  .imagen-publicacion {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
