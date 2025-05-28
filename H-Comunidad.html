@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comunidades CDMX</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="C-Comunidad.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style> body { font-family: 'Poppins', sans-serif; } </style>
+  
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+        <img src="Diseño/F-LOGO-VERTICAL-TECNM.webp" width="80px" height="80px">
+
+        <h1 class="header h1">Comunidades</h1>
+        <button class="notifications">
+            <img src="Diseño/F-Notificacion.png" alt="Notificaciones">
+        </button>
+        <button class="buscar">
+          <img src="Diseño/F-lupa.png" alt="Buscar">
+        </button>
+        <div class="search">
+            
+        </div>
+    </div>
+</header>
+
+  <main>
+    <div class="grid" id="institutos"></div>
+  </main>
+
+  <footer>
+    <div class="menu">
+      <a class="menu-item" href="H-Inicio.html">
+        <img src="Diseño/F-inicio.png" alt="Página Principal">
+      </a>
+      <a class="menu-item" href="H-Comunidad.html">
+        <img src="Diseño/F-comunidad.png" alt="Comunidad">
+      </a>
+      <a class="menu-item" href="H-Mensajes.html">
+        <img src="Diseño/F-mensaje.png" alt="Mensajes">
+      </a>
+      <a class="menu-item" href="H-Perfil.html">
+        <img src="Diseño/F-usuario.png" alt="Perfil">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const institutosCDMX = [
+      { nombre: "Instituto Tecnológico de Álvaro Obregón", miembros: 140, imagen:"Logo/itao.jfif", carreras: ["Ing. Electrónica", "Ing. Bioquímica", "Ing. Sistemas Computacionales", "Ing. Industrial", "Ing. Mecánica", "Ing. Administración Industrial"] },
+      { nombre: "Instituto Tecnológico de Gustavo A. Madero", miembros: 120,imagen:"Logo/Tec-Madero.jpeg", carreras: ["Ing. Ambiental" , "Ing. Industrial", "Ing. Ferroviaria", "Ing. en Logística", "Ing. en Gestión Empresarial", "Ing. en Tecnologías de la información y comunicación"] },
+      { nombre: "Instituto Tecnológico de Gustavo A. Madero II", miembros: 110,imagen:"Logo/Tec-Madero-ll.jpeg", carreras: ["Ing. en Administración", "Ing. Industrial", "Arquitectura", "Ing. en Tecnologías de la Información y Comunicación"] },
+      { nombre: "Instituto Tecnológico de Iztapalapa I", miembros: 90,imagen:"Logo/Tec-Izta-1.png", carreras: ["Ing. en Gestión Empresarial", "Ing. Industrial", "Ing. en Mecatrónica", "Ing. en Sistemas Computacionales"] },
+      { nombre: "Instituto Tecnológico de Iztapalapa II", miembros: 100,imagen:"Logo/Tec-Izta-2.jpeg", carreras: ["Ing. en Administración", "Ing. Logística", "Ing. en TIC´s", "Ing. en Administración-Mixta"] },
+      { nombre: "Instituto Tecnológico de Iztapalapa III", miembros: 95,imagen:"Diseño/F-ITI3.png", carreras: ["Ing. en Informática", "Ing. en Gestión Empresarial", "Ing. Civil"] },
+      { nombre: "Instituto Tecnológico de Milpa Alta I", miembros: 80,imagen:"Logo/Tec-Milpa-1.jpeg", carreras: ["Ing. Bioquímica", "Ing. Gestión Empresarial", "Ing. en Sistemas Computacionales"] },
+      { nombre: "Instituto Tecnológico de Milpa Alta II", miembros: 85,imagen:"Logo/Tec-Milpa-2.jpeg", carreras: ["Ing. Gestión Empresarial", "Ing. Industrial", "Ing. en Sistemas Computacionales", "Licenciatura en Turismo"] },
+      { nombre: "Instituto Tecnológico de Tláhuac", miembros: 115,imagen:"Logo/Tec-Tla-1.jpeg", carreras: ["Ing. Mecatrónica", "Ing. Electrónica", "Ing. en Sistemas Automotrices", "Ing. en Sistemas Computacionales", "Ing. Ferroviaria", "Licenciatura en Administración", "Contador público"] },
+      { nombre: "Instituto Tecnológico de Tláhuac II", miembros: 120,imagen:"Logo/Tec-Tla-2.jpeg", carreras: ["Ing. en Gestión Empresarial", "Ing. en Logística", "Ing. en Tecnologías de la Información"] },
+      { nombre: "Instituto Tecnológico de Tláhuac III", miembros: 125,imagen:"Logo/Tec-Tla-3.jpeg", carreras: ["Ing. Industrial", "Ing. Informática", "Administración", "Ing. en Energías Renovables", "Licenciatura en Turismo", "Ing. en Ciencia de Datos"] },
+      { nombre: "Instituto Tecnológico de Tlalpan", miembros: 110,imagen:"Logo/Tec-Tlalpan.jpeg", carreras: ["Ing. Electrónica", "Ing. Gestión Empresarial", "Ing en Tecnologías de la Información y Comunicaciones"] },
+      { nombre: "Instituto Tecnológico de Tlalnepantla", miembros: 130,imagen:"Logo/Tec-Tlalnepantla.jpeg", carreras: ["Ing. Eléctrica", "Ing. Electromecánica", "Ing. Electrónica", "Ing. en Administración", "Ing. en Desarrollo de Aplicaciones", "Ing. en Gestión Empresarial", "Ing. en Tecnologías de la Información y Comunicaciones", "Ingeniería Industrial", "Ing. Mecánica", "Ing. Mecatrónica"] }
+    ];
+
+    const contenedor = document.getElementById('institutos');
+
+    institutosCDMX.forEach((inst, i) => {
+      const div = document.createElement('div');
+      div.className = 'card';
+      div.innerHTML = `
+        <img src="${inst.imagen}" alt="${inst.nombre}">
+        <h3>${inst.nombre}</h3>
+        <p>${inst.miembros} miembros</p>
+        <div class="carreras">
+          <strong>Carreras:</strong><br>
+          ${inst.carreras.join('<br>')}
+          <div class="btn-container">
+            <button class="ver-grupo">Ver grupo</button>
+          </div>
+        </div>
+      `;
+
+      div.addEventListener('click', () => {
+        const carrerasDiv = div.querySelector('.carreras');
+        const allCarreras = document.querySelectorAll('.carreras');
+        allCarreras.forEach(c => {
+          if (c !== carrerasDiv) c.style.display = 'none';
+        });
+        carrerasDiv.style.display = (carrerasDiv.style.display === 'block') ? 'none' : 'block';
+      });
+
+      contenedor.appendChild(div);
+    });
+  </script>
+</body>
+</html>

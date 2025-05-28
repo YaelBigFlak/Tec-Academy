@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e9f0fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Cambiado de height a min-height */
+}
+
+.header-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-container h1 {
+  margin: 20px;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/*>>>>>>>>>>>>>>Notificaciones<<<<<<<<<<<<<<<<<*/
+.notifications {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.notifications img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.7;
+  align-content: end;
+}
+
+.notifications img:hover {
+  opacity: 1;
+}
+
+.buscar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.buscar img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.7;
+  align-content: end;
+}
+
+.buscar img:hover {
+  opacity: 1;
+}
+
+.search input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+main {
+  flex: 1;
+  padding: 15px;
+  padding-bottom: 70px; /* Añadido espacio para el footer */
+  overflow-y: auto; /* Permite el desplazamiento del contenido principal */
+}
+
+/* Rejilla de tarjetas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* Tarjeta con acento de color */
+.card {
+  background: #ffffff;
+  border-left: 6px solid #4682b4;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card img {
+  width: 100%;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #193a6a;
+}
+
+.card p {
+  font-size: 14px;
+  color: #4682b4;
+}
+
+.carreras {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+  display: none;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.ver-grupo {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.ver-grupo:hover {
+  background-color: #145dc1;
+}
+
+/*<<<<<<<<<<<<<<<<Menu*>>>>>>>>>>>>>>>>>*/
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 12px 0;
+  border-top: 2px solid #ddd;
+}
+.menu {
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  gap: 100px;                 
+}
+.menu-item {
+ 
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-item img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+}
+
+.menu-item img:hover {
+  opacity: 1;
+
+}
